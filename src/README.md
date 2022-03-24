@@ -20,18 +20,6 @@ After installation install terraform:
 tfenv install
 ```
 
-### 2. Azure CLI
-
-In order to authenticate to Azure portal and manage terraform state it's necessary to install and login to Azure subscription.
-
-- [Azure CLI](https://docs.microsoft.com/it-it/cli/azure/install-azure-cli)
-
-After installation login to Azure:
-
-```sh
-az login
-```
-
 ### 3. Azure DevOps Personal Access Token
 
 In order to authenticate to Azure DevOps ad manage pipelines you need to create and set a Personal Access Token.
@@ -48,29 +36,6 @@ export AZDO_PERSONAL_ACCESS_TOKEN="__YOUR_PERSONAL_ACCESS_TOKEN__"
 
 AZDO_ORG_SERVICE_URL can be with `pagopa-io` or the new `pagopaspa`
 
-## How to
-
-Create a new project or a pipeline into appropriate directory.
-
-```bash
-    .
-    ├── ...
-    ├── new-azuredevops-projects
-    │ ├── project.tf
-    │ ├── provider.tf
-    │ ├── secrets.tf
-    │ ├── service_connections.tf
-    │ ├── time_sleep.tf
-    │ ├── github_repo_name_1.tf     # all pipelines in github_repo_name_1
-    │ ├── ...
-    │ └── github_repo_name_n.tf     # all pipelines in github_repo_name_n
-    └── ...
-```
-
-1. if your project contains more github repos add all pipelines in the same azure devops project
-2. for each github repo create a new file with github repo name
-3. put all github repo pipelines into same file `github_repo_name_1.tf`
-4. put all pipelines variables at beginning of `github_repo_name_1.tf`
 
 ⚠️ **Very Important**
 
