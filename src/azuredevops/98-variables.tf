@@ -11,7 +11,7 @@ variable "ms-person" {
       organization    = "pagopa"
       name            = "pdv-ms-tokenizer"
       branch_name     = "refs/heads/main"
-      pipelines_path  = "src/pipelines"
+      pipelines_path  = ".devops"
       yml_prefix_name = null
     }
     pipeline = {
