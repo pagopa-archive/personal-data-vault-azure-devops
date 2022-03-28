@@ -4,7 +4,7 @@ locals {
 }
 
 resource "azuredevops_project" "this" {
-  name               = "user-data-vault-projects"
+  name               = "personal-data-vault-projects"
   description        = "DevOps project for user data vault."
   visibility         = "public"
   version_control    = "Git"
