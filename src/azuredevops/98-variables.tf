@@ -9,7 +9,7 @@ variable "ms-person" {
   default = {
     repository = {
       organization    = "pagopa"
-      name            = "ecs-app-test"
+      name            = "pdv-ms-tokenizer"
       branch_name     = "refs/heads/main"
       pipelines_path  = "src/pipelines"
       yml_prefix_name = null
