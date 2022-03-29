@@ -1,6 +1,6 @@
 locals {
   delploy_app = {
-    docker_image = "gowebapp"
+    docker_image = "ms-tokenizer"
   }
 }
 
