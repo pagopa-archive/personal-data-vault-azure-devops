@@ -5,11 +5,27 @@ variable "region" {
 }
 
 # git repo ms-person service
-variable "ms-person" {
+variable "ms-tokenizer" {
   default = {
     repository = {
       organization    = "pagopa"
       name            = "pdv-ms-tokenizer"
+      branch_name     = "refs/heads/main"
+      pipelines_path  = ".devops"
+      yml_prefix_name = null
+    }
+    pipeline = {
+      enable_code_review = true
+      enable_deploy      = true
+    }
+  }
+}
+
+variable "ms-person" {
+  default = {
+    repository = {
+      organization    = "pagopa"
+      name            = "pdv-ms-person"
       branch_name     = "refs/heads/main"
       pipelines_path  = ".devops"
       yml_prefix_name = null
