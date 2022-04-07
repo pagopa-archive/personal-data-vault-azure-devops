@@ -30,9 +30,9 @@ resource "azuredevops_serviceendpoint_aws" "uat_serviceendpoint" {
   description           = "Managed by AzureDevOps"
 
   access_key_id = jsondecode(
-  data.aws_secretsmanager_secret_version.devops.secret_string)["aws_iac_access_key_id"]
+  data.aws_secretsmanager_secret_version.devops.secret_string)["aws_deploy_access_key_id"]
   secret_access_key = jsondecode(
-  data.aws_secretsmanager_secret_version.devops.secret_string)["aws_iac_secret_access_key"]
+  data.aws_secretsmanager_secret_version.devops.secret_string)["aws_deploy_secret_access_key"]
 }
 
 resource "azuredevops_serviceendpoint_aws" "prod_serviceendpoint" {
@@ -41,7 +41,7 @@ resource "azuredevops_serviceendpoint_aws" "prod_serviceendpoint" {
   description           = "Managed by AzureDevOps"
 
   access_key_id = jsondecode(
-  data.aws_secretsmanager_secret_version.devops.secret_string)["aws_iac_access_key_id"]
+  data.aws_secretsmanager_secret_version.devops.secret_string)["aws_deploy_access_key_id"]
   secret_access_key = jsondecode(
-  data.aws_secretsmanager_secret_version.devops.secret_string)["aws_iac_secret_access_key"]
+  data.aws_secretsmanager_secret_version.devops.secret_string)["aws_deploy_secret_access_key"]
 }
