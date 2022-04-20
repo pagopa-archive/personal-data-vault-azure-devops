@@ -6,6 +6,7 @@ terraform {
     key            = "uat/devops/webapp/tfstate"
     region         = "eu-south-1"
     dynamodb_table = "terraform-lock"
+    profile        = "ppa-personal-data-vault-uat"
   }
 
   required_providers {
@@ -23,5 +24,12 @@ terraform {
 }
 
 provider "aws" {
-  region = var.region
+  profile = "ppa-personal-data-vault-uat"
+  region  = var.region
+}
+
+provider "aws" {
+  alias   = "prod"
+  profile = "ppa-personal-data-vault-prod"
+  region  = var.region
 }
