@@ -21,6 +21,7 @@
 | <a name="module_ecs_person_deploy"></a> [ecs\_person\_deploy](#module\_ecs\_person\_deploy) | git::https://github.com/pagopa/azuredevops-tf-modules.git//azuredevops_build_definition_deploy?ref=v2.0.5 |  |
 | <a name="module_ecs_test"></a> [ecs\_test](#module\_ecs\_test) | git::https://github.com/pagopa/azuredevops-tf-modules.git//azuredevops_build_definition_deploy?ref=v2.0.5 |  |
 | <a name="module_ecs_user_registry_deploy"></a> [ecs\_user\_registry\_deploy](#module\_ecs\_user\_registry\_deploy) | git::https://github.com/pagopa/azuredevops-tf-modules.git//azuredevops_build_definition_deploy?ref=v2.0.5 |  |
+| <a name="module_pipeline-user_registry_code_review"></a> [pipeline-user\_registry\_code\_review](#module\_pipeline-user\_registry\_code\_review) | git::https://github.com/pagopa/azuredevops-tf-modules.git//azuredevops_build_definition_code_review?ref=v2.0.5 |  |
 
 ## Resources
 
@@ -43,7 +44,7 @@
 |------|-------------|------|---------|:--------:|
 | <a name="input_ms-esc-test"></a> [ms-esc-test](#input\_ms-esc-test) | n/a | `map` | <pre>{<br>  "pipeline": {<br>    "enable_code_review": true,<br>    "enable_deploy": true<br>  },<br>  "repository": {<br>    "branch_name": "refs/heads/main",<br>    "name": "ecs-app-test",<br>    "organization": "pagopa",<br>    "pipelines_path": "src/pipelines",<br>    "yml_prefix_name": null<br>  }<br>}</pre> | no |
 | <a name="input_ms-person"></a> [ms-person](#input\_ms-person) | git repo ms-person | `map` | <pre>{<br>  "pipeline": {<br>    "enable_code_review": true,<br>    "enable_deploy": true<br>  },<br>  "repository": {<br>    "branch_name": "refs/heads/main",<br>    "name": "pdv-ms-person",<br>    "organization": "pagopa",<br>    "pipelines_path": ".devops",<br>    "yml_prefix_name": null<br>  }<br>}</pre> | no |
-| <a name="input_ms-user-registry"></a> [ms-user-registry](#input\_ms-user-registry) | n/a | `map` | <pre>{<br>  "pipeline": {<br>    "enable_code_review": true,<br>    "enable_deploy": true<br>  },<br>  "repository": {<br>    "branch_name": "refs/heads/main",<br>    "name": "pdv-ms-user-registry",<br>    "organization": "pagopa",<br>    "pipelines_path": ".devops",<br>    "yml_prefix_name": null<br>  }<br>}</pre> | no |
+| <a name="input_ms-user-registry"></a> [ms-user-registry](#input\_ms-user-registry) | n/a | `map` | <pre>{<br>  "pipeline": {<br>    "enable_code_review": true,<br>    "enable_deploy": true<br>  },<br>  "repository": {<br>    "branch_name": "refs/heads/main",<br>    "name": "pdv-ms-user-registry",<br>    "organization": "pagopa",<br>    "pipelines_path": ".devops",<br>    "yml_prefix_name": null<br>  },<br>  "sonarcloud": {<br>    "id": "8e72e090-b07e-4cc5-a28b-b7676a344530",<br>    "organization": "pagopa",<br>    "project_key": "pagopa_pdv-ms-tokenizer",<br>    "service_connection": "SONARCLOUD-USER-REGISTRY"<br>  }<br>}</pre> | no |
 | <a name="input_region"></a> [region](#input\_region) | AWS default region | `string` | `"eu-south-1"` | no |
 
 ## Outputs
